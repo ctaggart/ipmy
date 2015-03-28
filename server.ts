@@ -13,4 +13,5 @@ http.createServer((req, res) => {
   // we have the host, but just need hostname without the port
   let ip: IpRsp = { ip: host.split(':', 1)[0] };
   res.end(JSON.stringify(ip));
+
 }).listen(process.env.PORT || 3000);
